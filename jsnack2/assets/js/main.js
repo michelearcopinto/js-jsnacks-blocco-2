@@ -31,7 +31,6 @@ while (parseInt(numeroInserito) !== rightNumber) {
 
         alert('Il numero è troppo alto.');
     }
-
 }
 
 if (numeroInserito !== null) {
