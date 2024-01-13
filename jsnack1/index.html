@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSnack1</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <h1 class="text-uppercase text-center">somma numeri &lt; 50</h1>
+    <div class="card container">
+        <div class="card-body">
+            <h5 class="card-title">Ciclo While Snack 1</h5>
+            <p class="card-text">
+                Crea un array vuoto e chiedi all’utente un numero da inserire nell’array. Continua a
+                chiedere i numeri all’utente e a inserirli nell’array fino a quando la somma degli elementi è minore di
+                50.
+            </p>
+            <div class="row">
+                <div class="col-7 row align-content-start">
+                    <div class="form mb-3 col-12 d-flex flex-column align-items-center">
+                        <label for="insertNumber">Numero da inserire:</label>
+                        <input id="insertNumber" type="number" class="form-control" placeholder="Inserire numero">
+                    </div>
+                    <button id="startButton" type="button" class="btn btn-danger col-5 mx-auto">Genera</button>
+                    <button id="resetButton" type="button" class="btn btn-warning col-5 mx-auto">Reset</button>
+                    <div id="errorMessage" class="fs-5 mt-2"></div>
+                </div>
+                <div class="col-5">
+                    <div class="form d-flex flex-column align-items-center">
+                        <label for="sumOutput">Somma attuale:</label>
+                        <input id="sumOutput" type="number" class="form-control" placeholder="Somma" readonly>
+                        <label class="mt-2" for="numbersContainer">Elenco numeri inseriti:</label>
+                        <div id="numbersContainer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+        <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
