@@ -1,33 +1,64 @@
+const sumOutput = document.getElementById('sumOutput');
+const numbersContainer = document.getElementById('numbersContainer');
+const startButton = document.getElementById('startButton');
+
 let numeroInserito;
+
+let numeriInseriti = [];
+
+let i = 0;
 let sum = 0;
 
-while (sum <= 50) {
+let numbersList = document.createElement('ul');
+numbersList.classList.add('fw-bold', 'fs-3', 'text-center');
+numbersContainer.append(numbersList);
 
-    numeroInserito = prompt(`Inserisci un valore; l'ammontare attuale è di ${sum}`);
+startButton.addEventListener('click', function () {
 
-    console.log(numeroInserito);
+    sum = 0;
+    sumOutput.value = null;
+    numbersList.innerHTML = '';
 
-    if (numeroInserito === null) {
+    while (sum < 50) {
 
-        alert("Hai annullato l'inserimento. Il programma termina.");
-        break;
+        numeroInserito = prompt(`Inserisci un valore; l'ammontare attuale è di ${sum}`);
 
-    } else if (isNaN(parseInt(numeroInserito))) {
+        console.log(numeroInserito);
 
-        alert('Inserisci un numero valido');
-    } else {
+        if (numeroInserito === null) {
 
-        sum += parseInt(numeroInserito);
+            alert("Hai annullato l'inserimento. Il programma termina.");
+            break;
+
+        } else if (isNaN(parseInt(numeroInserito))) {
+
+            alert('Inserisci un numero valido');
+
+        } else {
+
+            numeriInseriti.push(parseInt(numeroInserito));
+
+            sum += numeriInseriti[i];
+
+            let numbersElement = document.createElement('li');
+            numbersElement.textContent = numeriInseriti[i];
+            numbersList.append(numbersElement);
+
+            i++;
+        }
     }
 
-}
+    console.log(numeriInseriti);
+    numeriInseriti = [];
 
+    if (numeroInserito !== null) {
 
-if (numeroInserito !== null) {
+        alert(`Hai superato il limite di 50 per la somma, hai ottenuto ${sum}`);
 
-    alert(`Hai superato il limite di 50 per la somma, hai ottenuto ${sum}`);
+    }
 
-}
+    sumOutput.valueAsNumber = sum;
+})
 
 
 
