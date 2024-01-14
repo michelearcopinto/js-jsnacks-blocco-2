@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSnack1</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <h1 class="text-uppercase text-center">indovina numero casuale da 1 a 100</h1>
+    <div class="card container">
+        <div class="card-body">
+            <h5 class="card-title">Ciclo For Snack 3</h5>
+            <p class="card-text">
+                Crea due array che hanno un numero di elementi diversi. Aggiungi elementi all’array che ha meno elementi
+                fino a quando ne avrà tanti quanti l’altro.
+            </p>
+            <span>
+                <em>
+                    N.b. lo script, a partire dal numero inserito, assegna casualmente ad un array la lunghezza indicata
+                    mentre all'altro un'altra inferiore ma casuale e colora di rosso gli elementi aggiunti attraverso un
+                    ciclo dall'array più breve.
+                </em>
+            </span>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form mb-3 d-flex flex-column align-items-center">
+                        <label for="insertNumber">Numero da inserire:</label>
+                        <input id="insertNumber" type="number" class="form-control" placeholder="Inserire numero">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form d-flex flex-column align-items-center">
+                        <label for="differenceArrays">Differenza tra i due array:</label>
+                        <input id="differenceArrays" type="text" class="form-control" placeholder="Differenza" readonly>
+                    </div>
+                </div>
+                <div id="buttons-container" class="mx-auto">
+                    <button id="startButton" type="button" class="btn btn-danger">Genera</button>
+                </div>
+                <div class="row">
+                    <div id="arrayOneOutput" class="fs-3 mt-2 col-6 text-center">
+                        <h1>Array 1</h1>
+                    </div>
+                    <div id="arrayTwoOutput" class="fs-3 mt-2 col-6 text-center">
+                        <h1>Array 2</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+        <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
