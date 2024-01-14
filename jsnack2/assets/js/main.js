@@ -1,3 +1,7 @@
+const rightNumberOutput = document.getElementById('rightNumberOutput');
+const numbersContainer = document.getElementById('numbersContainer');
+const startButton = document.getElementById('startButton');
+
 function generateRandomNum(min, max) {
     const randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
     return randomNum;
@@ -8,36 +12,66 @@ console.log(rightNumber);
 
 let numeroInserito;
 
-while (parseInt(numeroInserito) !== rightNumber) {
+let numbersList = document.createElement('ul');
+numbersList.classList.add('fw-bold', 'fs-3', 'text-center');
+numbersContainer.append(numbersList);
 
-    numeroInserito = prompt("Inserisci un valore da 1 a 100, prova a indovinare il numero estratto casualmente!");
+startButton.addEventListener('click', function () {
 
-    console.log(numeroInserito);
+    rightNumberOutput.value = null;
+    numbersList.innerHTML = '';
 
-    if (numeroInserito === null) {
+    while (parseInt(numeroInserito) !== rightNumber) {
 
-        alert("Hai annullato l'inserimento. Il programma termina.");
-        break;
+        numeroInserito = prompt("Inserisci un valore da 1 a 100, prova a indovinare il numero estratto casualmente!");
 
-    } else if (isNaN(parseInt(numeroInserito))) {
+        console.log(numeroInserito);
 
-        alert('Inserisci un numero valido');
+        if (numeroInserito === null) {
 
-    } else if (parseInt(numeroInserito) < rightNumber) {
+            alert("Hai annullato l'inserimento. Il programma termina.");
+            break;
 
-        alert('Il numero è troppo basso.');
+        } else if (isNaN(parseInt(numeroInserito))) {
 
-    } else if (parseInt(numeroInserito) > rightNumber) {
+            alert('Inserisci un numero valido');
 
-        alert('Il numero è troppo alto.');
+        } else if (parseInt(numeroInserito) < rightNumber) {
+
+            if ((rightNumber - parseInt(numeroInserito)) > 10) {
+
+                alert('Il numero è troppo basso.');
+
+            } else {
+
+                alert('Il numero è poco più basso.');
+            }
+
+        } else if (parseInt(numeroInserito) > rightNumber) {
+
+            if ((parseInt(numeroInserito) - rightNumber) > 10) {
+
+                alert('Il numero è troppo alto.');
+
+            } else {
+
+                alert('Il numero è poco più alto.');
+            }
+        }
+
+        let numbersElement = document.createElement('li');
+        numbersElement.textContent = numeroInserito;
+        numbersList.append(numbersElement);
     }
-}
 
-if (numeroInserito !== null) {
+    if (numeroInserito !== null) {
 
-    alert('Il numero è corretto.');
+        alert('Il numero è corretto.');
 
-}
+        rightNumberOutput.value = rightNumber;
+    }
+})
+
 
 
 
