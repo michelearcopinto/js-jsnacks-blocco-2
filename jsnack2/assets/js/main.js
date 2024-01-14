@@ -7,9 +7,6 @@ function generateRandomNum(min, max) {
     return randomNum;
 }
 
-let rightNumber = generateRandomNum(1, 100);
-console.log(rightNumber);
-
 let numeroInserito;
 
 let numbersList = document.createElement('ul');
@@ -17,6 +14,9 @@ numbersList.classList.add('fw-bold', 'fs-3', 'text-center');
 numbersContainer.append(numbersList);
 
 startButton.addEventListener('click', function () {
+
+    let rightNumber = generateRandomNum(1, 100);
+    console.log(rightNumber);
 
     rightNumberOutput.value = null;
     numbersList.innerHTML = '';
