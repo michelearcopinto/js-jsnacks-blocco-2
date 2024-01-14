@@ -8,7 +8,6 @@ const differenceArrays = document.getElementById('differenceArrays');
 const arrayOneOutput = document.getElementById('arrayOneOutput');
 const arrayTwoOutput = document.getElementById('arrayTwoOutput');
 const startButton = document.getElementById('startButton');
-const resetButton = document.getElementById('resetButton');
 
 let arrayOne = [];
 let arrayTwo = [];
