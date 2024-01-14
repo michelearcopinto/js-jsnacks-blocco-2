@@ -3,7 +3,7 @@ let sum = 0;
 
 while (sum <= 50) {
 
-    numeroInserito = prompt("Inserisci un valore");
+    numeroInserito = prompt(`Inserisci un valore; l'ammontare attuale è di ${sum}`);
 
     console.log(numeroInserito);
 
