@@ -27,16 +27,11 @@ startButton.addEventListener('click', function () {
 
     } else {
 
-        let liToRemove = document.querySelectorAll('li');
+        arrayOneOutput.innerHTML = '';
+        arrayTwoOutput.innerHTML = '';
 
-        for (let i = 0; i < liToRemove.length; i++) {
-
-            liToRemove[i].remove();
-        }
-
-        console.log(liToRemove)
-        liToRemove = [];
-
+        console.log(arrayOneList)
+        console.log(arrayTwoList)
 
         let randomArrayOutputPick = generateRandomNum(1, 2);
         let otherOutputArray, randomArrayPick, otherArray;
@@ -96,7 +91,7 @@ startButton.addEventListener('click', function () {
         console.log(otherArray);
         console.log(minimalArray);
 
-        differenceArrays.value = `Differenza di ${randomArrayPick.length - minimalArray.length} elementi`;
+        differenceArrays.value = `Differenza di ${randomArrayPick.length - minimalArray.length} elemento/i.`;
 
         arrayOne = [];
         arrayTwo = [];
